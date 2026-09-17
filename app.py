@@ -1,10 +1,3 @@
-"""
-Cloudflare Audit Log ကို API ကနေဆွဲယူမယ့် Script
---------------------------------------------------
-Requirement: pip install -r requirements.txt
-Config: .env file ထဲမှာ credentials များ ထည့်ပါ (.env.example ကို copy ကူးပါ)
-"""
-
 import os
 import json
 import requests
@@ -22,14 +15,10 @@ from reportlab.platypus import (
     Spacer,
 )
 
-# .env file ထဲက value များကို environment ထဲသို့ load လုပ်ခြင်း
 load_dotenv()
 
-# ---------------------------
-# .env ထဲက Config များ ဖတ်ခြင်း
-# ---------------------------
 ACCOUNT_ID = os.getenv("CLOUDFLARE_ACCOUNT_ID")
-ZONE_ID = os.getenv("CLOUDFLARE_ZONE_ID")          # audit log အတွက်တော့ မလိုပေမယ့် အသင့်ထားပါတယ်
+ZONE_ID = os.getenv("CLOUDFLARE_ZONE_ID") 
 API_TOKEN = os.getenv("CLOUDFLARE_API_TOKEN")
 
 BASE_URL = f"https://api.cloudflare.com/client/v4/accounts/{ACCOUNT_ID}/audit_logs"
@@ -53,21 +42,14 @@ def check_config():
     ]
     if missing:
         raise SystemExit(
-            ".env file ထဲမှာ အောက်ပါ value(s) များ ပျောက်နေပါတယ်: "
+            "Missing required environment variables: "
             + ", ".join(missing)
-            + "\n.env.example ကို .env အဖြစ် copy ကူးပြီး ဖြည့်ပါ။"
+            + "\nPlease copy .env.example to .env and fill in the required values."
         )
 
 
 def fetch_audit_logs(since=None, before=None, days_back=None, per_page=100):
-    """
-    Audit log များကို pagination နဲ့ တစ်ခါတည်း အကုန်ဆွဲယူမယ့် function
-
-    ၂ မျိုးထဲက တစ်မျိုးကို ရွေးသုံးနိုင်ပါတယ်:
-      1) days_back=7  → "လွန်ခဲ့သော N ရက်" ပုံစံ
-      2) since="2026-08-16T00:00:00Z", before="2026-08-17T00:00:00Z"
-         → တိတိကျကျ ရက်စွဲအပိုင်းအခြား ပုံစံ (Aug 16 2026 ရဲ့ log အတွက် ဒါကိုသုံးပါ)
-    """
+    
     if since is None or before is None:
         now = datetime.now(timezone.utc)
         since = (now - timedelta(days=days_back or 7)).strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -119,14 +101,12 @@ def save_to_file(logs, filename="audit_logs.json"):
 
 
 def _mask(value, keep_start=6, keep_end=4):
-    """Account/Zone ID လို sensitive value ကို တစ်စိတ်တစ်ပိုင်း ဖုံးပေးမယ့် helper"""
     if not value or not isinstance(value, str) or len(value) <= keep_start + keep_end:
         return value or ""
     return f"{value[:keep_start]}...{value[-keep_end:]}"
 
 
 def _format_entry(log):
-    """audit log entry တစ်ခုကို PDF row အတွက် readable field များ ဖြစ်အောင် ပြောင်းခြင်း"""
     when = log.get("when", "")
     actor = log.get("actor", {}) or {}
     action = log.get("action", {}) or {}
@@ -153,10 +133,7 @@ def _format_entry(log):
 
 
 def save_to_pdf(logs, filename="audit_report.pdf", title="Cloudflare Audit Log Report"):
-    """
-    Audit log များကို လူဖတ်လို့ ရအောင် ဇယားပုံစံနဲ့ PDF report ထုတ်ပေးမယ့် function
-    Account ID ကို full value မပြဘဲ တစ်စိတ်တစ်ပိုင်း mask ပြထားပါတယ်
-    """
+   
     doc = SimpleDocTemplate(
         filename,
         pagesize=landscape(A4),
@@ -224,14 +201,10 @@ def save_to_pdf(logs, filename="audit_report.pdf", title="Cloudflare Audit Log R
 if __name__ == "__main__":
     check_config()
 
-    # ဥပမာ: Aug 16, 2026 (UTC) တစ်ရက်စာ audit log များကို ဆွဲမယ်
     logs = fetch_audit_logs(
         since="2026-08-16T00:00:00Z",
         before="2026-08-17T00:00:00Z",
     )
-
-    # "လွန်ခဲ့သော N ရက်" ပုံစံ ပြန်သုံးချင်ရင် အောက်ကလိုင်းကို uncomment လုပ်ပြီး အပေါ်ကို comment ပိတ်ပါ
-    # logs = fetch_audit_logs(days_back=7)
 
     save_to_file(logs, filename="audit_logs_2026-08-16.json")
     save_to_pdf(logs, filename="audit_report_2026-08-16.pdf")
