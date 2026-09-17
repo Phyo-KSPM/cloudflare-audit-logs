@@ -48,14 +48,19 @@ def check_config():
         )
 
 
-def fetch_audit_logs(days_back=7, per_page=100):
+def fetch_audit_logs(since=None, before=None, days_back=None, per_page=100):
     """
-    လွန်ခဲ့သော days_back ရက်အတွင်း audit log များကို
-    pagination နဲ့ တစ်ခါတည်း အကုန်ဆွဲယူမယ့် function
+    Audit log များကို pagination နဲ့ တစ်ခါတည်း အကုန်ဆွဲယူမယ့် function
+
+    ၂ မျိုးထဲက တစ်မျိုးကို ရွေးသုံးနိုင်ပါတယ်:
+      1) days_back=7  → "လွန်ခဲ့သော N ရက်" ပုံစံ
+      2) since="2026-08-16T00:00:00Z", before="2026-08-17T00:00:00Z"
+         → တိတိကျကျ ရက်စွဲအပိုင်းအခြား ပုံစံ (Aug 16 2026 ရဲ့ log အတွက် ဒါကိုသုံးပါ)
     """
-    now = datetime.now(timezone.utc)
-    since = (now - timedelta(days=days_back)).strftime("%Y-%m-%dT%H:%M:%SZ")
-    before = now.strftime("%Y-%m-%dT%H:%M:%SZ")
+    if since is None or before is None:
+        now = datetime.now(timezone.utc)
+        since = (now - timedelta(days=days_back or 7)).strftime("%Y-%m-%dT%H:%M:%SZ")
+        before = now.strftime("%Y-%m-%dT%H:%M:%SZ")
 
     all_logs = []
     page = 1
@@ -104,5 +109,14 @@ def save_to_file(logs, filename="audit_logs.json"):
 
 if __name__ == "__main__":
     check_config()
-    logs = fetch_audit_logs(days_back=7)   # လွန်ခဲ့သော ၇ ရက်စာ ဆွဲမယ်
-    save_to_file(logs)
+
+    # ဥပမာ: Aug 16, 2026 (UTC) တစ်ရက်စာ audit log များကို ဆွဲမယ်
+    logs = fetch_audit_logs(
+        since="2026-08-16T00:00:00Z",
+        before="2026-08-17T00:00:00Z",
+    )
+
+    # "လွန်ခဲ့သော N ရက်" ပုံစံ ပြန်သုံးချင်ရင် အောက်ကလိုင်းကို uncomment လုပ်ပြီး အပေါ်ကို comment ပိတ်ပါ
+    # logs = fetch_audit_logs(days_back=7)
+
+    save_to_file(logs, filename="audit_logs_2026-08-16.json")

@@ -1,0 +1,1532 @@
+[
+  {
+    "action": {
+      "info": "Certificate pack deployed",
+      "result": true,
+      "type": "deployed"
+    },
+    "actor": {
+      "id": "1",
+      "type": "system"
+    },
+    "id": "7e18d48a-a1ad-4d38-a8b2-edfdc32c70d8",
+    "interface": "",
+    "metadata": {
+      "zone_name": "ceir.gov.mm",
+      "zone_tag": "ea7356dd629871d3ccf880fe0a877a72"
+    },
+    "newValue": "",
+    "newValueJson": {
+      "certificate_authority": "google",
+      "certificates": [
+        {
+          "bundle_method": "ubiquitous",
+          "expires_on": "2026-11-14T01:56:17Z",
+          "hosts": [
+            "ceir.gov.mm",
+            "*.ceir.gov.mm"
+          ],
+          "id": "1d1f8078-904a-454c-8198-55ee8c5cdbef",
+          "issuer": "GoogleTrustServices",
+          "modified_on": "2026-08-16T01:56:25.862784Z",
+          "priority": null,
+          "serial_number": "334305317636958522710374051157284323367",
+          "signature": "ECDSAWithSHA256",
+          "status": "active",
+          "uploaded_on": null,
+          "zone_id": "ea7356dd629871d3ccf880fe0a877a72"
+        },
+        {
+          "bundle_method": "ubiquitous",
+          "expires_on": "2026-11-14T01:55:52Z",
+          "hosts": [
+            "ceir.gov.mm",
+            "*.ceir.gov.mm"
+          ],
+          "id": "1fe2de2e-128d-4337-83fd-bcffb59f1aea",
+          "issuer": "GoogleTrustServices",
+          "modified_on": "2026-08-16T01:56:25.862784Z",
+          "priority": null,
+          "serial_number": "291932586044551570835299158873269966835",
+          "signature": "SHA256WithRSA",
+          "status": "active",
+          "uploaded_on": null,
+          "zone_id": "ea7356dd629871d3ccf880fe0a877a72"
+        }
+      ],
+      "created_at": "2025-05-30T09:30:03.739816Z",
+      "dedicated_ips": false,
+      "hosts": [
+        "ceir.gov.mm",
+        "*.ceir.gov.mm"
+      ],
+      "id": "6b995419-1566-44ae-88ba-7a1300e3a092",
+      "modified_on": "2026-08-16T01:56:25.862784Z",
+      "primary_certificate": "1d1f8078-904a-454c-8198-55ee8c5cdbef",
+      "priority": 0,
+      "qs_mode": 0,
+      "qs_mode_changed_at": null,
+      "qs_mode_desired": null,
+      "redeployed_at": 0,
+      "sans": [
+        "ceir.gov.mm",
+        "*.ceir.gov.mm"
+      ],
+      "status": "active",
+      "type": "universal",
+      "validity_days": 90,
+      "zone_id": "ea7356dd629871d3ccf880fe0a877a72"
+    },
+    "oldValue": "",
+    "oldValueJson": {
+      "certificate_authority": "google",
+      "certificates": [
+        {
+          "bundle_method": "ubiquitous",
+          "expires_on": "2026-11-14T01:56:17Z",
+          "hosts": [
+            "ceir.gov.mm",
+            "*.ceir.gov.mm"
+          ],
+          "id": "1d1f8078-904a-454c-8198-55ee8c5cdbef",
+          "issuer": "GoogleTrustServices",
+          "modified_on": "2026-08-16T01:56:25.862784Z",
+          "priority": null,
+          "serial_number": "334305317636958522710374051157284323367",
+          "signature": "ECDSAWithSHA256",
+          "status": "pending_deployment",
+          "uploaded_on": null,
+          "zone_id": "ea7356dd629871d3ccf880fe0a877a72"
+        },
+        {
+          "bundle_method": "ubiquitous",
+          "expires_on": "2026-11-14T01:55:52Z",
+          "hosts": [
+            "ceir.gov.mm",
+            "*.ceir.gov.mm"
+          ],
+          "id": "1fe2de2e-128d-4337-83fd-bcffb59f1aea",
+          "issuer": "GoogleTrustServices",
+          "modified_on": "2026-08-16T01:56:25.862784Z",
+          "priority": null,
+          "serial_number": "291932586044551570835299158873269966835",
+          "signature": "SHA256WithRSA",
+          "status": "pending_deployment",
+          "uploaded_on": null,
+          "zone_id": "ea7356dd629871d3ccf880fe0a877a72"
+        }
+      ],
+      "created_at": "2025-05-30T09:30:03.739816Z",
+      "dedicated_ips": false,
+      "hosts": [
+        "ceir.gov.mm",
+        "*.ceir.gov.mm"
+      ],
+      "id": "6b995419-1566-44ae-88ba-7a1300e3a092",
+      "modified_on": "2026-08-16T01:56:25.862784Z",
+      "primary_certificate": "1d1f8078-904a-454c-8198-55ee8c5cdbef",
+      "priority": 0,
+      "qs_mode": 0,
+      "qs_mode_changed_at": null,
+      "qs_mode_desired": null,
+      "sans": [
+        "ceir.gov.mm",
+        "*.ceir.gov.mm"
+      ],
+      "status": "pending_deployment",
+      "type": "universal",
+      "validation_method": "txt",
+      "validity_days": 90,
+      "zone_id": "ea7356dd629871d3ccf880fe0a877a72"
+    },
+    "owner": {
+      "id": "5be82c938b888a39babca8ea05bc3a3c"
+    },
+    "resource": {
+      "id": "6b995419-1566-44ae-88ba-7a1300e3a092",
+      "type": "certificate_pack"
+    },
+    "when": "2026-08-16T01:56:26.666052Z"
+  },
+  {
+    "action": {
+      "info": "Certificates ordered from the Certificate Authority",
+      "result": true,
+      "type": "ordered"
+    },
+    "actor": {
+      "id": "1",
+      "type": "system"
+    },
+    "id": "f759a8bc-9a3f-4ec5-bb24-35c063778ac1",
+    "interface": "",
+    "metadata": {
+      "zone_name": "ceir.gov.mm",
+      "zone_tag": "ea7356dd629871d3ccf880fe0a877a72"
+    },
+    "newValue": "",
+    "newValueJson": {
+      "authority": "google",
+      "brand_id": null,
+      "bundle_method": "ubiquitous",
+      "certificates": [
+        {
+          "expires_on": "2026-11-14T01:56:17Z",
+          "fingerprint_sha256": "88f244f3131509610ee48c73c4225611d0bb5fcf49d2c9ab8eecab074a198978",
+          "id": "1d1f8078-904a-454c-8198-55ee8c5cdbef",
+          "issued_on": "2026-08-16T00:56:19Z",
+          "issuer": "GoogleTrustServices",
+          "serial_number": "334305317636958522710374051157284323367",
+          "signature": "ECDSAWithSHA256"
+        }
+      ],
+      "dedicated_ips": false,
+      "hosts": [
+        "ceir.gov.mm",
+        "*.ceir.gov.mm"
+      ],
+      "id": "6b995419-1566-44ae-88ba-7a1300e3a092",
+      "modified_on": "2026-08-16T01:55:53.980044Z",
+      "priority": 0,
+      "qs_mode": 0,
+      "qs_mode_changed_at": null,
+      "qs_mode_desired": null,
+      "sans": [
+        "ceir.gov.mm",
+        "*.ceir.gov.mm"
+      ],
+      "status": "pending_deployment",
+      "type": "universal",
+      "validation_method": "txt",
+      "validation_type": "dv",
+      "validity_days": 90,
+      "zone_id": "ea7356dd629871d3ccf880fe0a877a72"
+    },
+    "oldValue": "",
+    "oldValueJson": {
+      "authority": "google",
+      "brand_id": null,
+      "bundle_method": "ubiquitous",
+      "certificates": [
+        {
+          "expires_on": "2026-11-14T01:56:17Z",
+          "fingerprint_sha256": "88f244f3131509610ee48c73c4225611d0bb5fcf49d2c9ab8eecab074a198978",
+          "id": "1d1f8078-904a-454c-8198-55ee8c5cdbef",
+          "issued_on": "2026-08-16T00:56:19Z",
+          "issuer": "GoogleTrustServices",
+          "serial_number": "334305317636958522710374051157284323367",
+          "signature": "ECDSAWithSHA256"
+        },
+        {
+          "expires_on": "2026-11-14T01:55:52Z",
+          "fingerprint_sha256": "2178cca9c882623434c4537926ceb71d068ad8f783d657095acc6f341f7a9466",
+          "id": "1fe2de2e-128d-4337-83fd-bcffb59f1aea",
+          "issued_on": "2026-08-16T00:56:10Z",
+          "issuer": "GoogleTrustServices",
+          "serial_number": "291932586044551570835299158873269966835",
+          "signature": "SHA256WithRSA"
+        }
+      ],
+      "dedicated_ips": false,
+      "hosts": [
+        "ceir.gov.mm",
+        "*.ceir.gov.mm"
+      ],
+      "id": "6b995419-1566-44ae-88ba-7a1300e3a092",
+      "modified_on": "2026-08-16T01:55:53.980044Z",
+      "priority": 0,
+      "qs_mode": 0,
+      "qs_mode_changed_at": null,
+      "qs_mode_desired": null,
+      "sans": [
+        "ceir.gov.mm",
+        "*.ceir.gov.mm"
+      ],
+      "status": "pending_validation",
+      "type": "universal",
+      "validation_method": "txt",
+      "validation_type": "dv",
+      "validity_days": 90,
+      "zone_id": "ea7356dd629871d3ccf880fe0a877a72"
+    },
+    "owner": {
+      "id": "5be82c938b888a39babca8ea05bc3a3c"
+    },
+    "resource": {
+      "id": "6b995419-1566-44ae-88ba-7a1300e3a092",
+      "type": "certificate_pack"
+    },
+    "when": "2026-08-16T01:56:25.873839Z"
+  },
+  {
+    "action": {
+      "result": true,
+      "type": "delete"
+    },
+    "actor": {
+      "id": "1",
+      "type": "system"
+    },
+    "id": "75745a37-6968-42a7-b084-73e6383636d2",
+    "interface": "API",
+    "metadata": {
+      "zone_name": "ceir.gov.mm"
+    },
+    "newValue": "",
+    "newValueJson": {
+      "content": "\"jLU108qCSDNKpnEfnYqHG6eha5aep1yGcp7u0bQfwmY\"",
+      "data": {},
+      "id": "c02250798176da7019b550c012ca8563",
+      "name": "_acme-challenge.ceir.gov.mm",
+      "proxied": false,
+      "settings": {},
+      "ttl": 1,
+      "type": "TXT",
+      "zone_id": "ea7356dd629871d3ccf880fe0a877a72",
+      "zone_name": "ceir.gov.mm"
+    },
+    "oldValue": "",
+    "oldValueJson": {},
+    "owner": {
+      "id": "5be82c938b888a39babca8ea05bc3a3c"
+    },
+    "resource": {
+      "id": "c02250798176da7019b550c012ca8563",
+      "type": "dns.record"
+    },
+    "when": "2026-08-16T01:56:25.677767Z"
+  },
+  {
+    "action": {
+      "result": true,
+      "type": "delete"
+    },
+    "actor": {
+      "id": "1",
+      "type": "system"
+    },
+    "id": "9bb2f106-4d88-4ae8-b269-268c60ab3c50",
+    "interface": "API",
+    "metadata": {
+      "zone_name": "ceir.gov.mm"
+    },
+    "newValue": "",
+    "newValueJson": {
+      "content": "\"vq_M0R8JsA56O-5NDINp540DqrO43Zz4Gr03YSp-A9g\"",
+      "data": {},
+      "id": "8e67ac9c1719c70f4e5fbae1ab103b5e",
+      "name": "_acme-challenge.ceir.gov.mm",
+      "proxied": false,
+      "settings": {},
+      "ttl": 1,
+      "type": "TXT",
+      "zone_id": "ea7356dd629871d3ccf880fe0a877a72",
+      "zone_name": "ceir.gov.mm"
+    },
+    "oldValue": "",
+    "oldValueJson": {},
+    "owner": {
+      "id": "5be82c938b888a39babca8ea05bc3a3c"
+    },
+    "resource": {
+      "id": "8e67ac9c1719c70f4e5fbae1ab103b5e",
+      "type": "dns.record"
+    },
+    "when": "2026-08-16T01:56:25.65782Z"
+  },
+  {
+    "action": {
+      "result": true,
+      "type": "create"
+    },
+    "actor": {
+      "id": "1",
+      "type": "system"
+    },
+    "id": "63107d83-5102-48bd-9fc2-794c01f2b55f",
+    "interface": "API",
+    "metadata": {
+      "zone_name": "ceir.gov.mm"
+    },
+    "newValue": "",
+    "newValueJson": {
+      "content": "\"jLU108qCSDNKpnEfnYqHG6eha5aep1yGcp7u0bQfwmY\"",
+      "data": {},
+      "id": "c02250798176da7019b550c012ca8563",
+      "name": "_acme-challenge.ceir.gov.mm",
+      "proxied": false,
+      "settings": {},
+      "ttl": 1,
+      "type": "TXT",
+      "zone_id": "ea7356dd629871d3ccf880fe0a877a72",
+      "zone_name": "ceir.gov.mm"
+    },
+    "oldValue": "",
+    "oldValueJson": {},
+    "owner": {
+      "id": "5be82c938b888a39babca8ea05bc3a3c"
+    },
+    "resource": {
+      "id": "c02250798176da7019b550c012ca8563",
+      "type": "dns.record"
+    },
+    "when": "2026-08-16T01:56:25.620812Z"
+  },
+  {
+    "action": {
+      "result": true,
+      "type": "create"
+    },
+    "actor": {
+      "id": "1",
+      "type": "system"
+    },
+    "id": "0b083a07-ef83-4bfb-88b1-94e11fb78456",
+    "interface": "API",
+    "metadata": {
+      "zone_name": "ceir.gov.mm"
+    },
+    "newValue": "",
+    "newValueJson": {
+      "content": "\"vq_M0R8JsA56O-5NDINp540DqrO43Zz4Gr03YSp-A9g\"",
+      "data": {},
+      "id": "8e67ac9c1719c70f4e5fbae1ab103b5e",
+      "name": "_acme-challenge.ceir.gov.mm",
+      "proxied": false,
+      "settings": {},
+      "ttl": 1,
+      "type": "TXT",
+      "zone_id": "ea7356dd629871d3ccf880fe0a877a72",
+      "zone_name": "ceir.gov.mm"
+    },
+    "oldValue": "",
+    "oldValueJson": {},
+    "owner": {
+      "id": "5be82c938b888a39babca8ea05bc3a3c"
+    },
+    "resource": {
+      "id": "8e67ac9c1719c70f4e5fbae1ab103b5e",
+      "type": "dns.record"
+    },
+    "when": "2026-08-16T01:56:25.594609Z"
+  },
+  {
+    "action": {
+      "result": true,
+      "type": "delete"
+    },
+    "actor": {
+      "id": "1",
+      "type": "system"
+    },
+    "id": "c7eaaabf-0555-42ad-b360-0bf231ad4e0c",
+    "interface": "API",
+    "metadata": {
+      "zone_name": "ceir.gov.mm"
+    },
+    "newValue": "",
+    "newValueJson": {
+      "content": "\"jLU108qCSDNKpnEfnYqHG6eha5aep1yGcp7u0bQfwmY\"",
+      "data": {},
+      "id": "b390c1c9ab0d85be77a1abdd378510a5",
+      "name": "_acme-challenge.ceir.gov.mm",
+      "proxied": false,
+      "settings": {},
+      "ttl": 1,
+      "type": "TXT",
+      "zone_id": "ea7356dd629871d3ccf880fe0a877a72",
+      "zone_name": "ceir.gov.mm"
+    },
+    "oldValue": "",
+    "oldValueJson": {},
+    "owner": {
+      "id": "5be82c938b888a39babca8ea05bc3a3c"
+    },
+    "resource": {
+      "id": "b390c1c9ab0d85be77a1abdd378510a5",
+      "type": "dns.record"
+    },
+    "when": "2026-08-16T01:56:25.582306Z"
+  },
+  {
+    "action": {
+      "result": true,
+      "type": "delete"
+    },
+    "actor": {
+      "id": "1",
+      "type": "system"
+    },
+    "id": "be343f37-7dd7-44b6-ade8-4d8409cad56e",
+    "interface": "API",
+    "metadata": {
+      "zone_name": "ceir.gov.mm"
+    },
+    "newValue": "",
+    "newValueJson": {
+      "content": "\"vq_M0R8JsA56O-5NDINp540DqrO43Zz4Gr03YSp-A9g\"",
+      "data": {},
+      "id": "afa0ac5043c47a2ae6b0251cb17c7735",
+      "name": "_acme-challenge.ceir.gov.mm",
+      "proxied": false,
+      "settings": {},
+      "ttl": 1,
+      "type": "TXT",
+      "zone_id": "ea7356dd629871d3ccf880fe0a877a72",
+      "zone_name": "ceir.gov.mm"
+    },
+    "oldValue": "",
+    "oldValueJson": {},
+    "owner": {
+      "id": "5be82c938b888a39babca8ea05bc3a3c"
+    },
+    "resource": {
+      "id": "afa0ac5043c47a2ae6b0251cb17c7735",
+      "type": "dns.record"
+    },
+    "when": "2026-08-16T01:56:25.578702Z"
+  },
+  {
+    "action": {
+      "result": true,
+      "type": "create"
+    },
+    "actor": {
+      "id": "1",
+      "type": "system"
+    },
+    "id": "c49709a8-a1bd-4779-a9a5-49f2b0075b8f",
+    "interface": "API",
+    "metadata": {
+      "zone_name": "ceir.gov.mm"
+    },
+    "newValue": "",
+    "newValueJson": {
+      "content": "\"jLU108qCSDNKpnEfnYqHG6eha5aep1yGcp7u0bQfwmY\"",
+      "data": {},
+      "id": "b390c1c9ab0d85be77a1abdd378510a5",
+      "name": "_acme-challenge.ceir.gov.mm",
+      "proxied": false,
+      "settings": {},
+      "ttl": 1,
+      "type": "TXT",
+      "zone_id": "ea7356dd629871d3ccf880fe0a877a72",
+      "zone_name": "ceir.gov.mm"
+    },
+    "oldValue": "",
+    "oldValueJson": {},
+    "owner": {
+      "id": "5be82c938b888a39babca8ea05bc3a3c"
+    },
+    "resource": {
+      "id": "b390c1c9ab0d85be77a1abdd378510a5",
+      "type": "dns.record"
+    },
+    "when": "2026-08-16T01:56:17.999766Z"
+  },
+  {
+    "action": {
+      "result": true,
+      "type": "create"
+    },
+    "actor": {
+      "id": "1",
+      "type": "system"
+    },
+    "id": "8a6f35b4-0554-4cf5-97de-f338c0630815",
+    "interface": "API",
+    "metadata": {
+      "zone_name": "ceir.gov.mm"
+    },
+    "newValue": "",
+    "newValueJson": {
+      "content": "\"vq_M0R8JsA56O-5NDINp540DqrO43Zz4Gr03YSp-A9g\"",
+      "data": {},
+      "id": "afa0ac5043c47a2ae6b0251cb17c7735",
+      "name": "_acme-challenge.ceir.gov.mm",
+      "proxied": false,
+      "settings": {},
+      "ttl": 1,
+      "type": "TXT",
+      "zone_id": "ea7356dd629871d3ccf880fe0a877a72",
+      "zone_name": "ceir.gov.mm"
+    },
+    "oldValue": "",
+    "oldValueJson": {},
+    "owner": {
+      "id": "5be82c938b888a39babca8ea05bc3a3c"
+    },
+    "resource": {
+      "id": "afa0ac5043c47a2ae6b0251cb17c7735",
+      "type": "dns.record"
+    },
+    "when": "2026-08-16T01:56:17.985273Z"
+  },
+  {
+    "action": {
+      "result": true,
+      "type": "delete"
+    },
+    "actor": {
+      "id": "1",
+      "type": "system"
+    },
+    "id": "106116f3-9bf9-45ba-a6fb-597a207873c8",
+    "interface": "API",
+    "metadata": {
+      "zone_name": "ceir.gov.mm"
+    },
+    "newValue": "",
+    "newValueJson": {
+      "content": "\"jLU108qCSDNKpnEfnYqHG6eha5aep1yGcp7u0bQfwmY\"",
+      "data": {},
+      "id": "5fd4598fb2d3ff55c27b0f2f8654d284",
+      "name": "_acme-challenge.ceir.gov.mm",
+      "proxied": false,
+      "settings": {},
+      "ttl": 1,
+      "type": "TXT",
+      "zone_id": "ea7356dd629871d3ccf880fe0a877a72",
+      "zone_name": "ceir.gov.mm"
+    },
+    "oldValue": "",
+    "oldValueJson": {},
+    "owner": {
+      "id": "5be82c938b888a39babca8ea05bc3a3c"
+    },
+    "resource": {
+      "id": "5fd4598fb2d3ff55c27b0f2f8654d284",
+      "type": "dns.record"
+    },
+    "when": "2026-08-16T01:56:17.975199Z"
+  },
+  {
+    "action": {
+      "result": true,
+      "type": "delete"
+    },
+    "actor": {
+      "id": "1",
+      "type": "system"
+    },
+    "id": "a3132938-3697-47e4-905c-7f2477d8bcd4",
+    "interface": "API",
+    "metadata": {
+      "zone_name": "ceir.gov.mm"
+    },
+    "newValue": "",
+    "newValueJson": {
+      "content": "\"vq_M0R8JsA56O-5NDINp540DqrO43Zz4Gr03YSp-A9g\"",
+      "data": {},
+      "id": "73cd1aa5655cad93e2add8dd3570c4f2",
+      "name": "_acme-challenge.ceir.gov.mm",
+      "proxied": false,
+      "settings": {},
+      "ttl": 1,
+      "type": "TXT",
+      "zone_id": "ea7356dd629871d3ccf880fe0a877a72",
+      "zone_name": "ceir.gov.mm"
+    },
+    "oldValue": "",
+    "oldValueJson": {},
+    "owner": {
+      "id": "5be82c938b888a39babca8ea05bc3a3c"
+    },
+    "resource": {
+      "id": "73cd1aa5655cad93e2add8dd3570c4f2",
+      "type": "dns.record"
+    },
+    "when": "2026-08-16T01:56:17.970955Z"
+  },
+  {
+    "action": {
+      "result": true,
+      "type": "create"
+    },
+    "actor": {
+      "id": "1",
+      "type": "system"
+    },
+    "id": "d5245412-5a49-4a9d-bed8-def3b198f8e1",
+    "interface": "API",
+    "metadata": {
+      "zone_name": "ceir.gov.mm"
+    },
+    "newValue": "",
+    "newValueJson": {
+      "content": "\"jLU108qCSDNKpnEfnYqHG6eha5aep1yGcp7u0bQfwmY\"",
+      "data": {},
+      "id": "5fd4598fb2d3ff55c27b0f2f8654d284",
+      "name": "_acme-challenge.ceir.gov.mm",
+      "proxied": false,
+      "settings": {},
+      "ttl": 1,
+      "type": "TXT",
+      "zone_id": "ea7356dd629871d3ccf880fe0a877a72",
+      "zone_name": "ceir.gov.mm"
+    },
+    "oldValue": "",
+    "oldValueJson": {},
+    "owner": {
+      "id": "5be82c938b888a39babca8ea05bc3a3c"
+    },
+    "resource": {
+      "id": "5fd4598fb2d3ff55c27b0f2f8654d284",
+      "type": "dns.record"
+    },
+    "when": "2026-08-16T01:56:17.049816Z"
+  },
+  {
+    "action": {
+      "result": true,
+      "type": "create"
+    },
+    "actor": {
+      "id": "1",
+      "type": "system"
+    },
+    "id": "ba25dc65-47b0-403f-a72f-ed8882088816",
+    "interface": "API",
+    "metadata": {
+      "zone_name": "ceir.gov.mm"
+    },
+    "newValue": "",
+    "newValueJson": {
+      "content": "\"vq_M0R8JsA56O-5NDINp540DqrO43Zz4Gr03YSp-A9g\"",
+      "data": {},
+      "id": "73cd1aa5655cad93e2add8dd3570c4f2",
+      "name": "_acme-challenge.ceir.gov.mm",
+      "proxied": false,
+      "settings": {},
+      "ttl": 1,
+      "type": "TXT",
+      "zone_id": "ea7356dd629871d3ccf880fe0a877a72",
+      "zone_name": "ceir.gov.mm"
+    },
+    "oldValue": "",
+    "oldValueJson": {},
+    "owner": {
+      "id": "5be82c938b888a39babca8ea05bc3a3c"
+    },
+    "resource": {
+      "id": "73cd1aa5655cad93e2add8dd3570c4f2",
+      "type": "dns.record"
+    },
+    "when": "2026-08-16T01:56:17.034568Z"
+  },
+  {
+    "action": {
+      "result": true,
+      "type": "delete"
+    },
+    "actor": {
+      "id": "1",
+      "type": "system"
+    },
+    "id": "12031745-4275-445c-8d79-29ef35151bbf",
+    "interface": "API",
+    "metadata": {
+      "zone_name": "ceir.gov.mm"
+    },
+    "newValue": "",
+    "newValueJson": {
+      "content": "\"jLU108qCSDNKpnEfnYqHG6eha5aep1yGcp7u0bQfwmY\"",
+      "data": {},
+      "id": "51272f7d7d40e6046ea4fa97294c9d54",
+      "name": "_acme-challenge.ceir.gov.mm",
+      "proxied": false,
+      "settings": {},
+      "ttl": 1,
+      "type": "TXT",
+      "zone_id": "ea7356dd629871d3ccf880fe0a877a72",
+      "zone_name": "ceir.gov.mm"
+    },
+    "oldValue": "",
+    "oldValueJson": {},
+    "owner": {
+      "id": "5be82c938b888a39babca8ea05bc3a3c"
+    },
+    "resource": {
+      "id": "51272f7d7d40e6046ea4fa97294c9d54",
+      "type": "dns.record"
+    },
+    "when": "2026-08-16T01:56:17.019642Z"
+  },
+  {
+    "action": {
+      "result": true,
+      "type": "delete"
+    },
+    "actor": {
+      "id": "1",
+      "type": "system"
+    },
+    "id": "6a3498a2-a3f1-4384-855c-4a2ff2062046",
+    "interface": "API",
+    "metadata": {
+      "zone_name": "ceir.gov.mm"
+    },
+    "newValue": "",
+    "newValueJson": {
+      "content": "\"vq_M0R8JsA56O-5NDINp540DqrO43Zz4Gr03YSp-A9g\"",
+      "data": {},
+      "id": "9ffbb924481994e83007e22c74c76e59",
+      "name": "_acme-challenge.ceir.gov.mm",
+      "proxied": false,
+      "settings": {},
+      "ttl": 1,
+      "type": "TXT",
+      "zone_id": "ea7356dd629871d3ccf880fe0a877a72",
+      "zone_name": "ceir.gov.mm"
+    },
+    "oldValue": "",
+    "oldValueJson": {},
+    "owner": {
+      "id": "5be82c938b888a39babca8ea05bc3a3c"
+    },
+    "resource": {
+      "id": "9ffbb924481994e83007e22c74c76e59",
+      "type": "dns.record"
+    },
+    "when": "2026-08-16T01:56:17.015278Z"
+  },
+  {
+    "action": {
+      "info": "Certificate pack created",
+      "result": true,
+      "type": "created"
+    },
+    "actor": {
+      "id": "1",
+      "type": "system"
+    },
+    "id": "14cf76f0-9ae0-435d-b6cf-7767032c6140",
+    "interface": "",
+    "metadata": {
+      "zone_name": "ceir.gov.mm",
+      "zone_tag": "ea7356dd629871d3ccf880fe0a877a72"
+    },
+    "newValue": "",
+    "newValueJson": {
+      "authority": "google",
+      "brand_id": null,
+      "bundle_method": "ubiquitous",
+      "dedicated_ips": false,
+      "id": "6b995419-1566-44ae-88ba-7a1300e3a092",
+      "modified_on": "2026-08-16T01:33:21.466012Z",
+      "priority": 0,
+      "qs_mode": 0,
+      "qs_mode_changed_at": null,
+      "qs_mode_desired": null,
+      "sans": [
+        "ceir.gov.mm",
+        "*.ceir.gov.mm"
+      ],
+      "status": "pending_validation",
+      "type": "universal",
+      "validation_method": "txt",
+      "validation_type": "dv",
+      "validity_days": 90,
+      "zone_id": "ea7356dd629871d3ccf880fe0a877a72"
+    },
+    "oldValue": "",
+    "oldValueJson": {},
+    "owner": {
+      "id": "5be82c938b888a39babca8ea05bc3a3c"
+    },
+    "resource": {
+      "id": "6b995419-1566-44ae-88ba-7a1300e3a092",
+      "type": "certificate_pack"
+    },
+    "when": "2026-08-16T01:55:53.992271Z"
+  },
+  {
+    "action": {
+      "result": true,
+      "type": "create"
+    },
+    "actor": {
+      "id": "1",
+      "type": "system"
+    },
+    "id": "57dcbcc7-c26e-4a63-bbb0-d05359927e4f",
+    "interface": "API",
+    "metadata": {
+      "zone_name": "ceir.gov.mm"
+    },
+    "newValue": "",
+    "newValueJson": {
+      "content": "\"jLU108qCSDNKpnEfnYqHG6eha5aep1yGcp7u0bQfwmY\"",
+      "data": {},
+      "id": "51272f7d7d40e6046ea4fa97294c9d54",
+      "name": "_acme-challenge.ceir.gov.mm",
+      "proxied": false,
+      "settings": {},
+      "ttl": 1,
+      "type": "TXT",
+      "zone_id": "ea7356dd629871d3ccf880fe0a877a72",
+      "zone_name": "ceir.gov.mm"
+    },
+    "oldValue": "",
+    "oldValueJson": {},
+    "owner": {
+      "id": "5be82c938b888a39babca8ea05bc3a3c"
+    },
+    "resource": {
+      "id": "51272f7d7d40e6046ea4fa97294c9d54",
+      "type": "dns.record"
+    },
+    "when": "2026-08-16T01:55:53.969116Z"
+  },
+  {
+    "action": {
+      "result": true,
+      "type": "create"
+    },
+    "actor": {
+      "id": "1",
+      "type": "system"
+    },
+    "id": "d7569690-4ae3-4277-82a9-e070ae7a8203",
+    "interface": "API",
+    "metadata": {
+      "zone_name": "ceir.gov.mm"
+    },
+    "newValue": "",
+    "newValueJson": {
+      "content": "\"vq_M0R8JsA56O-5NDINp540DqrO43Zz4Gr03YSp-A9g\"",
+      "data": {},
+      "id": "9ffbb924481994e83007e22c74c76e59",
+      "name": "_acme-challenge.ceir.gov.mm",
+      "proxied": false,
+      "settings": {},
+      "ttl": 1,
+      "type": "TXT",
+      "zone_id": "ea7356dd629871d3ccf880fe0a877a72",
+      "zone_name": "ceir.gov.mm"
+    },
+    "oldValue": "",
+    "oldValueJson": {},
+    "owner": {
+      "id": "5be82c938b888a39babca8ea05bc3a3c"
+    },
+    "resource": {
+      "id": "9ffbb924481994e83007e22c74c76e59",
+      "type": "dns.record"
+    },
+    "when": "2026-08-16T01:55:53.952232Z"
+  },
+  {
+    "action": {
+      "info": "Certificate pack deployed",
+      "result": true,
+      "type": "deployed"
+    },
+    "actor": {
+      "id": "1",
+      "type": "system"
+    },
+    "id": "e272ae65-66eb-422b-bca8-c505db602fe1",
+    "interface": "",
+    "metadata": {
+      "zone_name": "ceir.gov.mm",
+      "zone_tag": "ea7356dd629871d3ccf880fe0a877a72"
+    },
+    "newValue": "",
+    "newValueJson": {
+      "certificate_authority": "google",
+      "certificates": [
+        {
+          "bundle_method": "ubiquitous",
+          "expires_on": "2026-11-14T01:30:17Z",
+          "hosts": [
+            "ceir.gov.mm",
+            "*.ceir.gov.mm"
+          ],
+          "id": "545ee999-185d-4d45-811b-c4b28df3e819",
+          "issuer": "GoogleTrustServices",
+          "modified_on": "2026-08-16T01:33:21.059473Z",
+          "priority": null,
+          "serial_number": "202299817377054003508894467428064061549",
+          "signature": "SHA256WithRSA",
+          "status": "active",
+          "uploaded_on": null,
+          "zone_id": "ea7356dd629871d3ccf880fe0a877a72"
+        },
+        {
+          "bundle_method": "ubiquitous",
+          "expires_on": "2026-11-14T01:33:02Z",
+          "hosts": [
+            "ceir.gov.mm",
+            "*.ceir.gov.mm"
+          ],
+          "id": "61c03f76-a714-4a14-bf18-0bead879df8a",
+          "issuer": "GoogleTrustServices",
+          "modified_on": "2026-08-16T01:33:21.059473Z",
+          "priority": null,
+          "serial_number": "110417371446672481405722248334137039612",
+          "signature": "ECDSAWithSHA256",
+          "status": "active",
+          "uploaded_on": null,
+          "zone_id": "ea7356dd629871d3ccf880fe0a877a72"
+        }
+      ],
+      "created_at": "2025-05-30T09:30:03.739816Z",
+      "dedicated_ips": false,
+      "hosts": [
+        "ceir.gov.mm",
+        "*.ceir.gov.mm"
+      ],
+      "id": "6b995419-1566-44ae-88ba-7a1300e3a092",
+      "modified_on": "2026-08-16T01:33:21.059473Z",
+      "primary_certificate": "545ee999-185d-4d45-811b-c4b28df3e819",
+      "priority": 0,
+      "qs_mode": 0,
+      "qs_mode_changed_at": null,
+      "qs_mode_desired": null,
+      "redeployed_at": 0,
+      "sans": [
+        "ceir.gov.mm",
+        "*.ceir.gov.mm"
+      ],
+      "status": "active",
+      "type": "universal",
+      "validity_days": 90,
+      "zone_id": "ea7356dd629871d3ccf880fe0a877a72"
+    },
+    "oldValue": "",
+    "oldValueJson": {
+      "certificate_authority": "google",
+      "certificates": [
+        {
+          "bundle_method": "ubiquitous",
+          "expires_on": "2026-11-14T01:30:17Z",
+          "hosts": [
+            "ceir.gov.mm",
+            "*.ceir.gov.mm"
+          ],
+          "id": "545ee999-185d-4d45-811b-c4b28df3e819",
+          "issuer": "GoogleTrustServices",
+          "modified_on": "2026-08-16T01:33:21.059473Z",
+          "priority": null,
+          "serial_number": "202299817377054003508894467428064061549",
+          "signature": "SHA256WithRSA",
+          "status": "pending_deployment",
+          "uploaded_on": null,
+          "zone_id": "ea7356dd629871d3ccf880fe0a877a72"
+        },
+        {
+          "bundle_method": "ubiquitous",
+          "expires_on": "2026-11-14T01:33:02Z",
+          "hosts": [
+            "ceir.gov.mm",
+            "*.ceir.gov.mm"
+          ],
+          "id": "61c03f76-a714-4a14-bf18-0bead879df8a",
+          "issuer": "GoogleTrustServices",
+          "modified_on": "2026-08-16T01:33:21.059473Z",
+          "priority": null,
+          "serial_number": "110417371446672481405722248334137039612",
+          "signature": "ECDSAWithSHA256",
+          "status": "pending_deployment",
+          "uploaded_on": null,
+          "zone_id": "ea7356dd629871d3ccf880fe0a877a72"
+        }
+      ],
+      "created_at": "2025-05-30T09:30:03.739816Z",
+      "dedicated_ips": false,
+      "hosts": [
+        "ceir.gov.mm",
+        "*.ceir.gov.mm"
+      ],
+      "id": "6b995419-1566-44ae-88ba-7a1300e3a092",
+      "modified_on": "2026-08-16T01:33:21.059473Z",
+      "primary_certificate": "545ee999-185d-4d45-811b-c4b28df3e819",
+      "priority": 0,
+      "qs_mode": 0,
+      "qs_mode_changed_at": null,
+      "qs_mode_desired": null,
+      "sans": [
+        "ceir.gov.mm",
+        "*.ceir.gov.mm"
+      ],
+      "status": "pending_deployment",
+      "type": "universal",
+      "validation_method": "txt",
+      "validity_days": 90,
+      "zone_id": "ea7356dd629871d3ccf880fe0a877a72"
+    },
+    "owner": {
+      "id": "5be82c938b888a39babca8ea05bc3a3c"
+    },
+    "resource": {
+      "id": "6b995419-1566-44ae-88ba-7a1300e3a092",
+      "type": "certificate_pack"
+    },
+    "when": "2026-08-16T01:33:21.471141Z"
+  },
+  {
+    "action": {
+      "info": "Certificates ordered from the Certificate Authority",
+      "result": true,
+      "type": "ordered"
+    },
+    "actor": {
+      "id": "1",
+      "type": "system"
+    },
+    "id": "b1a19b91-c397-419e-badc-fdc2e7192a06",
+    "interface": "",
+    "metadata": {
+      "zone_name": "ceir.gov.mm",
+      "zone_tag": "ea7356dd629871d3ccf880fe0a877a72"
+    },
+    "newValue": "",
+    "newValueJson": {
+      "authority": "google",
+      "brand_id": null,
+      "bundle_method": "ubiquitous",
+      "certificates": [
+        {
+          "expires_on": "2026-11-14T01:33:02Z",
+          "fingerprint_sha256": "83b895cdd1bdd438372faa5fe758814ade743b3d0ebe9c99646992cccc8cd561",
+          "id": "61c03f76-a714-4a14-bf18-0bead879df8a",
+          "issued_on": "2026-08-16T00:33:14Z",
+          "issuer": "GoogleTrustServices",
+          "serial_number": "110417371446672481405722248334137039612",
+          "signature": "ECDSAWithSHA256"
+        }
+      ],
+      "dedicated_ips": false,
+      "hosts": [
+        "ceir.gov.mm",
+        "*.ceir.gov.mm"
+      ],
+      "id": "6b995419-1566-44ae-88ba-7a1300e3a092",
+      "modified_on": "2026-08-16T01:30:18.346925Z",
+      "priority": 0,
+      "qs_mode": 0,
+      "qs_mode_changed_at": null,
+      "qs_mode_desired": null,
+      "sans": [
+        "ceir.gov.mm",
+        "*.ceir.gov.mm"
+      ],
+      "status": "pending_deployment",
+      "type": "universal",
+      "validation_method": "txt",
+      "validation_type": "dv",
+      "validity_days": 90,
+      "zone_id": "ea7356dd629871d3ccf880fe0a877a72"
+    },
+    "oldValue": "",
+    "oldValueJson": {
+      "authority": "google",
+      "brand_id": null,
+      "bundle_method": "ubiquitous",
+      "certificates": [
+        {
+          "expires_on": "2026-11-14T01:30:17Z",
+          "fingerprint_sha256": "41287d3738202142e294e0602a82ee6527c609cecbc204df7380c0cb89570e46",
+          "id": "545ee999-185d-4d45-811b-c4b28df3e819",
+          "issued_on": "2026-08-16T00:32:56Z",
+          "issuer": "GoogleTrustServices",
+          "serial_number": "202299817377054003508894467428064061549",
+          "signature": "SHA256WithRSA"
+        },
+        {
+          "expires_on": "2026-11-14T01:33:02Z",
+          "fingerprint_sha256": "83b895cdd1bdd438372faa5fe758814ade743b3d0ebe9c99646992cccc8cd561",
+          "id": "61c03f76-a714-4a14-bf18-0bead879df8a",
+          "issued_on": "2026-08-16T00:33:14Z",
+          "issuer": "GoogleTrustServices",
+          "serial_number": "110417371446672481405722248334137039612",
+          "signature": "ECDSAWithSHA256"
+        }
+      ],
+      "dedicated_ips": false,
+      "hosts": [
+        "ceir.gov.mm",
+        "*.ceir.gov.mm"
+      ],
+      "id": "6b995419-1566-44ae-88ba-7a1300e3a092",
+      "modified_on": "2026-08-16T01:30:18.346925Z",
+      "priority": 0,
+      "qs_mode": 0,
+      "qs_mode_changed_at": null,
+      "qs_mode_desired": null,
+      "sans": [
+        "ceir.gov.mm",
+        "*.ceir.gov.mm"
+      ],
+      "status": "pending_validation",
+      "type": "universal",
+      "validation_method": "txt",
+      "validation_type": "dv",
+      "validity_days": 90,
+      "zone_id": "ea7356dd629871d3ccf880fe0a877a72"
+    },
+    "owner": {
+      "id": "5be82c938b888a39babca8ea05bc3a3c"
+    },
+    "resource": {
+      "id": "6b995419-1566-44ae-88ba-7a1300e3a092",
+      "type": "certificate_pack"
+    },
+    "when": "2026-08-16T01:33:21.071774Z"
+  },
+  {
+    "action": {
+      "result": true,
+      "type": "delete"
+    },
+    "actor": {
+      "id": "1",
+      "type": "system"
+    },
+    "id": "ca5ad7f8-0e4b-4c6d-816f-08b3ec3426de",
+    "interface": "API",
+    "metadata": {
+      "zone_name": "ceir.gov.mm"
+    },
+    "newValue": "",
+    "newValueJson": {
+      "content": "\"jLU108qCSDNKpnEfnYqHG6eha5aep1yGcp7u0bQfwmY\"",
+      "data": {},
+      "id": "7848f2b23db83e0b72ca6f0cc517ff50",
+      "name": "_acme-challenge.ceir.gov.mm",
+      "proxied": false,
+      "settings": {},
+      "ttl": 1,
+      "type": "TXT",
+      "zone_id": "ea7356dd629871d3ccf880fe0a877a72",
+      "zone_name": "ceir.gov.mm"
+    },
+    "oldValue": "",
+    "oldValueJson": {},
+    "owner": {
+      "id": "5be82c938b888a39babca8ea05bc3a3c"
+    },
+    "resource": {
+      "id": "7848f2b23db83e0b72ca6f0cc517ff50",
+      "type": "dns.record"
+    },
+    "when": "2026-08-16T01:33:20.921839Z"
+  },
+  {
+    "action": {
+      "result": true,
+      "type": "delete"
+    },
+    "actor": {
+      "id": "1",
+      "type": "system"
+    },
+    "id": "094f50f8-70fb-49f0-a244-509a64bbabe5",
+    "interface": "API",
+    "metadata": {
+      "zone_name": "ceir.gov.mm"
+    },
+    "newValue": "",
+    "newValueJson": {
+      "content": "\"vq_M0R8JsA56O-5NDINp540DqrO43Zz4Gr03YSp-A9g\"",
+      "data": {},
+      "id": "f3f9925e811597d7d452eb8eaf685c0e",
+      "name": "_acme-challenge.ceir.gov.mm",
+      "proxied": false,
+      "settings": {},
+      "ttl": 1,
+      "type": "TXT",
+      "zone_id": "ea7356dd629871d3ccf880fe0a877a72",
+      "zone_name": "ceir.gov.mm"
+    },
+    "oldValue": "",
+    "oldValueJson": {},
+    "owner": {
+      "id": "5be82c938b888a39babca8ea05bc3a3c"
+    },
+    "resource": {
+      "id": "f3f9925e811597d7d452eb8eaf685c0e",
+      "type": "dns.record"
+    },
+    "when": "2026-08-16T01:33:20.90301Z"
+  },
+  {
+    "action": {
+      "result": true,
+      "type": "create"
+    },
+    "actor": {
+      "id": "1",
+      "type": "system"
+    },
+    "id": "bc9f7bf9-acc8-4f97-b6f5-eeb05dc87d7c",
+    "interface": "API",
+    "metadata": {
+      "zone_name": "ceir.gov.mm"
+    },
+    "newValue": "",
+    "newValueJson": {
+      "content": "\"jLU108qCSDNKpnEfnYqHG6eha5aep1yGcp7u0bQfwmY\"",
+      "data": {},
+      "id": "7848f2b23db83e0b72ca6f0cc517ff50",
+      "name": "_acme-challenge.ceir.gov.mm",
+      "proxied": false,
+      "settings": {},
+      "ttl": 1,
+      "type": "TXT",
+      "zone_id": "ea7356dd629871d3ccf880fe0a877a72",
+      "zone_name": "ceir.gov.mm"
+    },
+    "oldValue": "",
+    "oldValueJson": {},
+    "owner": {
+      "id": "5be82c938b888a39babca8ea05bc3a3c"
+    },
+    "resource": {
+      "id": "7848f2b23db83e0b72ca6f0cc517ff50",
+      "type": "dns.record"
+    },
+    "when": "2026-08-16T01:33:20.867842Z"
+  },
+  {
+    "action": {
+      "result": true,
+      "type": "create"
+    },
+    "actor": {
+      "id": "1",
+      "type": "system"
+    },
+    "id": "52fa6051-88ac-4376-9942-d51b17451a8b",
+    "interface": "API",
+    "metadata": {
+      "zone_name": "ceir.gov.mm"
+    },
+    "newValue": "",
+    "newValueJson": {
+      "content": "\"vq_M0R8JsA56O-5NDINp540DqrO43Zz4Gr03YSp-A9g\"",
+      "data": {},
+      "id": "f3f9925e811597d7d452eb8eaf685c0e",
+      "name": "_acme-challenge.ceir.gov.mm",
+      "proxied": false,
+      "settings": {},
+      "ttl": 1,
+      "type": "TXT",
+      "zone_id": "ea7356dd629871d3ccf880fe0a877a72",
+      "zone_name": "ceir.gov.mm"
+    },
+    "oldValue": "",
+    "oldValueJson": {},
+    "owner": {
+      "id": "5be82c938b888a39babca8ea05bc3a3c"
+    },
+    "resource": {
+      "id": "f3f9925e811597d7d452eb8eaf685c0e",
+      "type": "dns.record"
+    },
+    "when": "2026-08-16T01:33:20.849115Z"
+  },
+  {
+    "action": {
+      "result": true,
+      "type": "delete"
+    },
+    "actor": {
+      "id": "1",
+      "type": "system"
+    },
+    "id": "159a157d-5f01-4f42-a850-898a1e1e9436",
+    "interface": "API",
+    "metadata": {
+      "zone_name": "ceir.gov.mm"
+    },
+    "newValue": "",
+    "newValueJson": {
+      "content": "\"jLU108qCSDNKpnEfnYqHG6eha5aep1yGcp7u0bQfwmY\"",
+      "data": {},
+      "id": "a13e06c18846e48008dfe8cc15c28fec",
+      "name": "_acme-challenge.ceir.gov.mm",
+      "proxied": false,
+      "settings": {},
+      "ttl": 1,
+      "type": "TXT",
+      "zone_id": "ea7356dd629871d3ccf880fe0a877a72",
+      "zone_name": "ceir.gov.mm"
+    },
+    "oldValue": "",
+    "oldValueJson": {},
+    "owner": {
+      "id": "5be82c938b888a39babca8ea05bc3a3c"
+    },
+    "resource": {
+      "id": "a13e06c18846e48008dfe8cc15c28fec",
+      "type": "dns.record"
+    },
+    "when": "2026-08-16T01:33:20.828564Z"
+  },
+  {
+    "action": {
+      "result": true,
+      "type": "delete"
+    },
+    "actor": {
+      "id": "1",
+      "type": "system"
+    },
+    "id": "3399812a-945a-4b0a-a107-3e30cc188f86",
+    "interface": "API",
+    "metadata": {
+      "zone_name": "ceir.gov.mm"
+    },
+    "newValue": "",
+    "newValueJson": {
+      "content": "\"vq_M0R8JsA56O-5NDINp540DqrO43Zz4Gr03YSp-A9g\"",
+      "data": {},
+      "id": "c4e132f78eb5dfd2a004835c29dd02e4",
+      "name": "_acme-challenge.ceir.gov.mm",
+      "proxied": false,
+      "settings": {},
+      "ttl": 1,
+      "type": "TXT",
+      "zone_id": "ea7356dd629871d3ccf880fe0a877a72",
+      "zone_name": "ceir.gov.mm"
+    },
+    "oldValue": "",
+    "oldValueJson": {},
+    "owner": {
+      "id": "5be82c938b888a39babca8ea05bc3a3c"
+    },
+    "resource": {
+      "id": "c4e132f78eb5dfd2a004835c29dd02e4",
+      "type": "dns.record"
+    },
+    "when": "2026-08-16T01:33:20.823092Z"
+  },
+  {
+    "action": {
+      "info": "Certificate pack created",
+      "result": true,
+      "type": "created"
+    },
+    "actor": {
+      "id": "1",
+      "type": "system"
+    },
+    "id": "e24b6520-a774-4cf4-af12-4f8ed1a9736d",
+    "interface": "",
+    "metadata": {
+      "zone_name": "ceir.gov.mm",
+      "zone_tag": "ea7356dd629871d3ccf880fe0a877a72"
+    },
+    "newValue": "",
+    "newValueJson": {
+      "authority": "google",
+      "brand_id": null,
+      "bundle_method": "ubiquitous",
+      "dedicated_ips": false,
+      "id": "6b995419-1566-44ae-88ba-7a1300e3a092",
+      "modified_on": "2026-06-18T00:04:11.663211Z",
+      "priority": 0,
+      "qs_mode": 0,
+      "qs_mode_changed_at": null,
+      "qs_mode_desired": null,
+      "sans": [
+        "ceir.gov.mm",
+        "*.ceir.gov.mm"
+      ],
+      "status": "pending_validation",
+      "type": "universal",
+      "validation_method": "txt",
+      "validation_type": "dv",
+      "validity_days": 90,
+      "zone_id": "ea7356dd629871d3ccf880fe0a877a72"
+    },
+    "oldValue": "",
+    "oldValueJson": {},
+    "owner": {
+      "id": "5be82c938b888a39babca8ea05bc3a3c"
+    },
+    "resource": {
+      "id": "6b995419-1566-44ae-88ba-7a1300e3a092",
+      "type": "certificate_pack"
+    },
+    "when": "2026-08-16T01:30:18.358902Z"
+  },
+  {
+    "action": {
+      "result": true,
+      "type": "create"
+    },
+    "actor": {
+      "id": "1",
+      "type": "system"
+    },
+    "id": "cc3e18cd-90f4-45d9-b938-6ef419ed59f2",
+    "interface": "API",
+    "metadata": {
+      "zone_name": "ceir.gov.mm"
+    },
+    "newValue": "",
+    "newValueJson": {
+      "content": "\"jLU108qCSDNKpnEfnYqHG6eha5aep1yGcp7u0bQfwmY\"",
+      "data": {},
+      "id": "a13e06c18846e48008dfe8cc15c28fec",
+      "name": "_acme-challenge.ceir.gov.mm",
+      "proxied": false,
+      "settings": {},
+      "ttl": 1,
+      "type": "TXT",
+      "zone_id": "ea7356dd629871d3ccf880fe0a877a72",
+      "zone_name": "ceir.gov.mm"
+    },
+    "oldValue": "",
+    "oldValueJson": {},
+    "owner": {
+      "id": "5be82c938b888a39babca8ea05bc3a3c"
+    },
+    "resource": {
+      "id": "a13e06c18846e48008dfe8cc15c28fec",
+      "type": "dns.record"
+    },
+    "when": "2026-08-16T01:30:18.332148Z"
+  },
+  {
+    "action": {
+      "result": true,
+      "type": "create"
+    },
+    "actor": {
+      "id": "1",
+      "type": "system"
+    },
+    "id": "57cbeb2e-454e-4177-a182-03aa0ee441d8",
+    "interface": "API",
+    "metadata": {
+      "zone_name": "ceir.gov.mm"
+    },
+    "newValue": "",
+    "newValueJson": {
+      "content": "\"vq_M0R8JsA56O-5NDINp540DqrO43Zz4Gr03YSp-A9g\"",
+      "data": {},
+      "id": "c4e132f78eb5dfd2a004835c29dd02e4",
+      "name": "_acme-challenge.ceir.gov.mm",
+      "proxied": false,
+      "settings": {},
+      "ttl": 1,
+      "type": "TXT",
+      "zone_id": "ea7356dd629871d3ccf880fe0a877a72",
+      "zone_name": "ceir.gov.mm"
+    },
+    "oldValue": "",
+    "oldValueJson": {},
+    "owner": {
+      "id": "5be82c938b888a39babca8ea05bc3a3c"
+    },
+    "resource": {
+      "id": "c4e132f78eb5dfd2a004835c29dd02e4",
+      "type": "dns.record"
+    },
+    "when": "2026-08-16T01:30:18.316093Z"
+  }
+]
