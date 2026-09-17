@@ -10,6 +10,17 @@ import json
 import requests
 from datetime import datetime, timedelta, timezone
 from dotenv import load_dotenv
+from reportlab.lib import colors
+from reportlab.lib.pagesizes import landscape, A4
+from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
+from reportlab.lib.units import cm
+from reportlab.platypus import (
+    SimpleDocTemplate,
+    Table,
+    TableStyle,
+    Paragraph,
+    Spacer,
+)
 
 # .env file ထဲက value များကို environment ထဲသို့ load လုပ်ခြင်း
 load_dotenv()
@@ -107,6 +118,109 @@ def save_to_file(logs, filename="audit_logs.json"):
     print(f"\nTotal {len(logs)} logs saved to {filename}")
 
 
+def _mask(value, keep_start=6, keep_end=4):
+    """Account/Zone ID လို sensitive value ကို တစ်စိတ်တစ်ပိုင်း ဖုံးပေးမယ့် helper"""
+    if not value or not isinstance(value, str) or len(value) <= keep_start + keep_end:
+        return value or ""
+    return f"{value[:keep_start]}...{value[-keep_end:]}"
+
+
+def _format_entry(log):
+    """audit log entry တစ်ခုကို PDF row အတွက် readable field များ ဖြစ်အောင် ပြောင်းခြင်း"""
+    when = log.get("when", "")
+    actor = log.get("actor", {}) or {}
+    action = log.get("action", {}) or {}
+    resource = log.get("resource", {}) or {}
+    metadata = log.get("metadata", {}) or {}
+    owner = log.get("owner", {}) or {}
+
+    actor_desc = actor.get("email") or actor.get("type") or actor.get("id", "-")
+    action_desc = action.get("description") or action.get("info") or action.get("type", "-")
+    result = "Success" if action.get("result") in (True, "success") else str(action.get("result", "-"))
+    resource_type = resource.get("type", "-")
+    zone_name = metadata.get("zone_name", "-")
+    account_id = _mask(owner.get("id", ""))
+
+    return {
+        "when": when,
+        "actor": actor_desc,
+        "action": action_desc,
+        "result": result,
+        "resource_type": resource_type,
+        "zone_name": zone_name,
+        "account_id": account_id,
+    }
+
+
+def save_to_pdf(logs, filename="audit_report.pdf", title="Cloudflare Audit Log Report"):
+    """
+    Audit log များကို လူဖတ်လို့ ရအောင် ဇယားပုံစံနဲ့ PDF report ထုတ်ပေးမယ့် function
+    Account ID ကို full value မပြဘဲ တစ်စိတ်တစ်ပိုင်း mask ပြထားပါတယ်
+    """
+    doc = SimpleDocTemplate(
+        filename,
+        pagesize=landscape(A4),
+        leftMargin=1.5 * cm,
+        rightMargin=1.5 * cm,
+        topMargin=1.5 * cm,
+        bottomMargin=1.5 * cm,
+    )
+
+    styles = getSampleStyleSheet()
+    cell_style = ParagraphStyle("cell", parent=styles["Normal"], fontSize=8, leading=10)
+    header_style = ParagraphStyle("header", parent=styles["Normal"], fontSize=8, leading=10, textColor=colors.white)
+
+    story = []
+
+    story.append(Paragraph(title, styles["Title"]))
+    story.append(
+        Paragraph(
+            f"Generated: {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')} &nbsp;|&nbsp; Total entries: {len(logs)}",
+            styles["Normal"],
+        )
+    )
+    story.append(Spacer(1, 0.5 * cm))
+
+    headers = ["Time (UTC)", "Actor", "Action", "Result", "Resource Type", "Zone", "Account ID"]
+    table_data = [[Paragraph(h, header_style) for h in headers]]
+
+    for log in logs:
+        row = _format_entry(log)
+        table_data.append([
+            Paragraph(str(row["when"]), cell_style),
+            Paragraph(str(row["actor"]), cell_style),
+            Paragraph(str(row["action"]), cell_style),
+            Paragraph(str(row["result"]), cell_style),
+            Paragraph(str(row["resource_type"]), cell_style),
+            Paragraph(str(row["zone_name"]), cell_style),
+            Paragraph(str(row["account_id"]), cell_style),
+        ])
+
+    col_widths = [3.2 * cm, 3.2 * cm, 4.5 * cm, 2.0 * cm, 3.0 * cm, 3.5 * cm, 3.5 * cm]
+    table = Table(table_data, colWidths=col_widths, repeatRows=1)
+
+    table.setStyle(
+        TableStyle(
+            [
+                ("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#F38020")),  # Cloudflare orange
+                ("TEXTCOLOR", (0, 0), (-1, 0), colors.white),
+                ("FONTNAME", (0, 0), (-1, 0), "Helvetica-Bold"),
+                ("ALIGN", (0, 0), (-1, -1), "LEFT"),
+                ("VALIGN", (0, 0), (-1, -1), "TOP"),
+                ("GRID", (0, 0), (-1, -1), 0.5, colors.grey),
+                ("ROWBACKGROUNDS", (0, 1), (-1, -1), [colors.white, colors.HexColor("#F5F5F5")]),
+                ("TOPPADDING", (0, 0), (-1, -1), 4),
+                ("BOTTOMPADDING", (0, 0), (-1, -1), 4),
+            ]
+        )
+    )
+
+    story.append(table)
+    doc.build(story)
+
+    print(f"PDF report saved to {filename}")
+
+
 if __name__ == "__main__":
     check_config()
 
@@ -120,3 +234,4 @@ if __name__ == "__main__":
     # logs = fetch_audit_logs(days_back=7)
 
     save_to_file(logs, filename="audit_logs_2026-08-16.json")
+    save_to_pdf(logs, filename="audit_report_2026-08-16.pdf")
